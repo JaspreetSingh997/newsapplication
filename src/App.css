@@ -204,7 +204,7 @@
 
 .bodyContainer .mainPanel {
   width: 70%;
-  height: 70vh;
+  padding: 0 0 10px 0;
   margin: 20px 0;
   border-radius: 8px;
   background: #fff;
@@ -213,7 +213,7 @@
 
 .bodyContainer .sidePanel {
   width: 30%;
-  height: 70vh;
+  padding: 0 0 20px 0;
   margin: 20px 0;
   border-radius: 8px;
   background: #fff;
@@ -258,9 +258,136 @@
   border-radius: 10px;
   outline: 1px solid rgba(0,0,0,0.1);
   width: 48.9%;
-  padding: 20px;
+  padding: 10px;
   flex: 0 1 auto;
 
+}
+
+.gbc1 
+{
+  display: flex;
+}
+
+.gbc1 .imageContainer {
+  width: 800px;
+  height: 150px;
+  margin: 15px 0;
+  box-shadow: 0 0 3px #191919;
+}
+
+.gbc1 .imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.gbc1Content {
+  display: block;
+  padding: 0 0 0 10px;
+}
+
+.gbc1Content .gbc1Cat {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  color: #b96d03;
+  text-transform: uppercase;
+}
+
+.gbc1Content .gbc1Title {
+  font-size: 13px;
+  width: 100%;
+}
+
+.gbc1Content .gbc1sub {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #979797;
+}
+
+.gbc1Content .date {
+  font-size: 12px;
+  color: #979797;
+}
+
+/* for others */
+.gbc2,
+.gbc3,
+.gbc4,
+.gbc5 {
+  display: flex;
+  padding: 5px;
+}
+
+.gbc2Content{
+  margin: 10px 0;
+}
+.gbc2Content {
+  display: block;
+  padding: 0 0 0 10px;
+}
+
+.gbc2Content .gbc2Cat {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  color: #b96d03;
+  text-transform: uppercase;
+}
+
+.gbc2Content .gbc2Title {
+  font-size: 9px;
+  width: 100%;
+}
+
+.gbc2Content .date {
+  font-size: 10px;
+  color: #979797;
+  margin: 5px 0;
+}
+
+.gbc2 .imageContainer,
+.gbc3 .imageContainer,
+.gbc4 .imageContainer,
+.gbc5 .imageContainer {
+  width: 200px;
+  height: 90px;
+  margin: 15px 0;
+  box-shadow: 0 0 3px #191919;
+  border-radius: 12px;
+}
+
+.gbc2 .imageContainer img,
+.gbc3 .imageContainer img,
+.gbc4 .imageContainer img,
+.gbc5 .imageContainer img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* sidebar */
+
+.sidegbc {
+  display: flex;
+  padding: 5px !important;
+}
+.sidegbc .imageContainer {
+  width: 200px;
+  height: 70px;
+  margin: 15px 0;
+  box-shadow: 0 0 3px #191919;
+  border-radius: 12px;
+}
+
+.sidegbc .imageContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.sidegbc .gbc2Content{
+  margin: 10px 0;
 }
 
 .gbc1 {
@@ -297,6 +424,86 @@
   border-radius: 10px;
 }
 
+.visualsContainer .flexContainer {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.visualsContainer .flexContainer .flexContent {
+  height: 280px;
+  width: 30%;
+  outline: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.flexContent .contentContainer{
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.contentContainer .title {
+  font-size: 11px;
+  width: 150px;
+  position: inherit;
+  bottom: 60px;
+  left: 10px;
+}
+
+.contentContainer .title h1 {
+  color: #fff;
+  font-weight: 550;
+}
+
+.contentContainer .date {
+  position: inherit; 
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 150px;
+  font-weight: 600;
+}
+
+.contentContainer .date p span {
+  color: #ffd900;
+}
+.flexContent .image {
+    height: 280px;
+    width: 100%;
+    border-radius: 10px;    
+}
+
+.flexContent .image.julia {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('../src/juliaG.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.flexContent .image.rashmika {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('../src/rashmika.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.flexContent .image.heidi {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('../src/heidi.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.flexContent .image.walker {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('../src/walker.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.flexContent .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .sidePanel.visuals p {
   text-align: center;
 }
@@ -304,8 +511,51 @@
 .animegbc {
   outline: 1px solid rgba(0,0,0,0.1);
   width: 48.9%;
-  padding: 20px;
   margin: 10px 0;
+  display: flex;
+  padding: 5px;
+}
+
+.gbc2Content{
+  margin: 10px 0;
+}
+.gbc2Content {
+  display: block;
+  padding: 0 0 0 10px;
+}
+
+.gbc2Content .gbc2Cat {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  color: #b96d03;
+  text-transform: uppercase;
+}
+
+.gbc2Content .gbc2Title {
+  font-size: 9px;
+  width: 100%;
+}
+
+.gbc2Content .date {
+  font-size: 10px;
+  color: #979797;
+  margin: 5px 0;
+}
+
+.animegbc .imageContainer {
+  width: 200px;
+  height: 90px;
+  margin: 15px 0;
+  box-shadow: 0 0 3px #191919;
+  border-radius: 12px;
+}
+
+.animegbc .imageContainer img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
 
 .morestories {
@@ -328,17 +578,147 @@
 
 .moreSBox 
 {
-  outline: 1px solid rgba(0,0,0,0.1);
-  padding: 20px;
   width: 100%;
   border-radius: 10px;
   margin: 10px 0;
   background: #fff;
-  height: 20vh;
+}
+
+.Ad {
+  color: #ccc;
+  font-size: 40px;
+  text-transform: uppercase;
+  transform: translate(0, 300%);
 }
 
 footer {
   background: #191919;
   width: 100%;
-  height: 40vh;
+}
+
+.footerContainer {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+.footerContainer .leftSide {
+  width: 50%;
+}
+
+.footerContainer .rightSide {
+  width: 50%;
+}
+
+.footerContainer .leftContent {
+  padding: 20px;
+}
+
+.footerContainer .newsSection {
+  padding: 20px;
+}
+
+.footerContainer .newsSection .newsTitle {
+  color: #eed600;
+}
+
+.footerContainer .newsSection .newsTitle h1 {
+  font-size: 18px;
+}
+
+.footerContainer .newsSection .tags {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.aboutDRP {
+  padding: 20px;
+}
+
+.aboutDRP .logo {
+  margin: 10px 0;
+}
+
+.aboutDRP .logo h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  background: #fdd831;
+  border-radius: 25px;
+  width: 11rem;
+}
+
+.aboutDRP p {
+  color: #fff;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.social {
+  padding: 20px;
+}
+
+.social span {
+  color: #eed600;
+  font-size: 17px;
+}
+
+.social ion-icon {
+  color: #fff;
+  margin: 0 0 0 10px;
+  font-size: 18px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.social ion-icon:hover {
+  background: #fff;
+  color: #000;
+  transition: .3s ease-in-out;
+}
+
+/* right side */
+
+.rightContent {
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.rightContent .rightTitle {
+  color: #eed600;
+}
+
+.rightContent .rightTitle h1 {
+  font-size: 18px;
+}
+
+.rightContent .quickLinksNav {
+  margin: 10px 0;
+  text-indent: 10px;
+}
+
+.quickLinksNav li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.quickLinksNav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.copyright {
+  background: #000;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.copyright p {
+  color: #fff;
 }
