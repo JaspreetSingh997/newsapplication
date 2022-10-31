@@ -39,8 +39,8 @@
 }
 
 .navbarContainer .nav {
-  width: 70%;
-  margin: 0 0 0 10%;
+  width: 50%;
+  margin: 5px 0 0 5%;
   display: flex;
 }
 
@@ -53,6 +53,47 @@
   text-decoration: none;
   color: #000;
   font-weight: 600;
+}
+
+
+.rightSideIcons {
+  margin: 5px 0;
+  display: flex;
+  padding: 0 0 10px 0;
+  gap: 10px;
+  border-left: 1px solid #ccc;
+
+
+}
+
+.rightSideIcons ion-icon {
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+  color: #b96d03
+}
+.rightSideIcons span {
+  color: #b96d03;
+  margin: 0 0 0 2px;
+}
+
+.rightSideIcons span ion-icon {
+  transform: translateY(5px);
+}
+.rightSideIcons .menuIcon {
+  border: 1px solid #b96d03;
+  padding: 5px;
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+}
+
+.rightSideIcons .searchIcon {
+  transform: translateY(3px);
+}
+.rightSideIcons .menuIcon:hover {
+  background: #b96d03;
+  transition: .3s ease-in-out;
+  color: #fff;
 }
 
 .item1 {
@@ -101,6 +142,22 @@
 
 }
 
+.image .imageInner {
+  color: #F2CD06;
+  position: relative;
+  bottom: 30px;
+  left: 10px;
+  display: flex;
+}
+
+
+.imageInner .catText {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 0 5px;
+  font-weight: bold;
+}
+
 .item1 .image {
   width: 100%;
   height: 300px;
@@ -140,8 +197,13 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -153,33 +215,31 @@
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
 }
 
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+.visualSlide {
+  text-align: initial;
 }
 
-.hotspot {
-  width: 80%;
-  padding: 0 0 30px 0;
-  background: #fff;
-  margin: 0 auto;
-  height: 15vh;
-}
+
 
 .htTitle {
   font-size: 10px;
   background: #b96d03;
   width: 100px;
   color: #fff;
-  transform: skew(-20deg, 0);
 }
+
 
 .htTitle h1 {
   text-transform: uppercase;
@@ -221,16 +281,21 @@
 }
 
 .mainPanel .mainTitle {
-  padding: 5px 0 0 5px;
+  padding: 10px 15px;
+  display: flex;
+}
+
+.sidePanel .mainTitle {
+  padding: 10px 15px;
   display: flex;
 }
 
 .mainTitle h1 {
   text-transform: uppercase;
-  font-weight: 400;
-  color: #b96d03;
+  font-weight: 600;
+  color: #BE8A24;
   letter-spacing: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .mainTitle a {
@@ -239,6 +304,13 @@
   text-decoration: none;
   color: #b96d03;
   text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mainTitle a ion-icon {
+  font-size: 18px;
+  transform: translate(-3px, 3px);
+  font-weight: 600;
 }
 
 .mainPanelContent {
@@ -246,6 +318,78 @@
   width: 95%;
   height: 85%;
   margin: 10px auto;
+}
+
+/* Hotspot */
+
+.hotspot {
+  width: 80%;
+  padding: 0 0 20px 0;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.hotspot .pagination {
+  display: flex;
+  margin: 0 0 20px 40%;
+  text-align: center;
+}
+
+.hotspot .pagination span {
+  width: 50px;
+  margin: 0 0 0 10px;
+  border: 1px solid #ccc;
+}
+
+.hotspot .pagination .active {
+  border: 1px solid #b96d03;
+}
+
+.swiperPanel {
+  display: flex;
+  padding: 10px !important;
+  border-right: 1px solid #ccc;
+}
+.swiperPanel .imageContainer {
+  width: 200px;
+  height: 70px;
+  margin: 10px 0;
+  box-shadow: 0 0 3px #191919;
+  border-radius: 12px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #b96d03 !important;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: 0 0 5px #191919;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.swiperPanel .imageContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.swiperPanel .gbc2Content{
+  margin: 0;
+}
+
+.swiperPanel .gbc2Cat {
+  text-align: left;
+  padding: 0 !important;
+  margin: 0 0 5px 0 !important;
+}
+.swiperPanel .gbc2Title {
+  text-align: left;
 }
 
 .gridBox {
@@ -263,7 +407,7 @@
 
 }
 
-.gbc1 
+.gbc1
 {
   display: flex;
 }
@@ -329,7 +473,6 @@
 .gbc2Content .gbc2Cat {
   font-size: 10px;
   font-weight: 600;
-  margin: 0 0 0 10px;
   color: #b96d03;
   text-transform: uppercase;
 }
@@ -432,14 +575,16 @@
 
 .visualsContainer .flexContainer .flexContent {
   height: 280px;
-  width: 30%;
+  width: 100%;
   outline: 1px solid rgba(0,0,0,0.1);
   border-radius: 10px;
+  margin: 0 0 0 10px;
 }
 
 .flexContent .contentContainer{
   position: absolute;
   transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .contentContainer .title {
@@ -456,7 +601,7 @@
 }
 
 .contentContainer .date {
-  position: inherit; 
+  position: inherit;
   bottom: 10px;
   left: 10px;
   color: #fff;
@@ -472,7 +617,7 @@
 .flexContent .image {
     height: 280px;
     width: 100%;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 .flexContent .image.julia {
@@ -527,7 +672,6 @@
 .gbc2Content .gbc2Cat {
   font-size: 10px;
   font-weight: 600;
-  margin: 0 0 0 10px;
   color: #b96d03;
   text-transform: uppercase;
 }
@@ -576,7 +720,7 @@
   height: 10vh;
 }
 
-.moreSBox 
+.moreSBox
 {
   width: 100%;
   border-radius: 10px;
@@ -620,11 +764,12 @@ footer {
 }
 
 .footerContainer .newsSection .newsTitle {
-  color: #eed600;
+  color: #BE8A24;
 }
 
 .footerContainer .newsSection .newsTitle h1 {
   font-size: 18px;
+  font-weight: 600;
 }
 
 .footerContainer .newsSection .tags {
@@ -645,7 +790,7 @@ footer {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-  background: #fdd831;
+  background: #BE8A24;
   border-radius: 25px;
   width: 11rem;
 }
@@ -661,8 +806,11 @@ footer {
 }
 
 .social span {
-  color: #eed600;
+  color: #BE8A24;
   font-size: 17px;
+  position: relative;
+  bottom: 13px;
+  font-weight: 600;
 }
 
 .social ion-icon {
@@ -690,7 +838,7 @@ footer {
 }
 
 .rightContent .rightTitle {
-  color: #eed600;
+  color: #BE8A24;
 }
 
 .rightContent .rightTitle h1 {
@@ -698,7 +846,7 @@ footer {
 }
 
 .rightContent .quickLinksNav {
-  margin: 10px 0;
+  margin: 15px 0;
   text-indent: 10px;
 }
 
@@ -722,3 +870,6 @@ footer {
 .copyright p {
   color: #fff;
 }
+
+
+
